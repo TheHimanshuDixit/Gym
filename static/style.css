@@ -16,12 +16,14 @@ body::before{
 }
 nav{
     background-color: #302d2d;
-    padding: 12px 
+    padding: 12px;
 }
 
 ul{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 li{

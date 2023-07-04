@@ -15,16 +15,16 @@ app.set('views', path.join(__dirname, 'views')) // Set the views directory
 // ENDPOINTS
 app.get('/', (req, res)=>{
     const con = "This is the best content on the internet so far so use it wisely"
-    const params = {'title': 'PubG is the best game', "content": con}
+    const params = {'title': 'Gym', "content": con}
     res.status(200).render('index.pug', params);
 })
 
 app.post('/', (req, res)=>{
-    name = req.body.name
-    age = req.body.age
-    gender = req.body.gender
-    address = req.body.address
-    more = req.body.more
+    const name = req.body.name
+    const age = req.body.age
+    const gender = req.body.gender
+    const address = req.body.address
+    const more = req.body.more
 
     let outputToWrite = `the name of the client is ${name}, ${age} years old, ${gender}, residing at ${address}. More about him/her: ${more}`
     fs.writeFileSync('output.txt', outputToWrite)
